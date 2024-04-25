@@ -10,7 +10,7 @@
     "content-type": "^1.0.2",
     "cookie": "^0.3.1",
     "cookie-signature": "^1.0.6",
-    "cypress": "^13.8.0",
+    "cypress": "^13.8.1",
     "debug": "^2.6.8",
     "depd": "^1.1.1",
     "destroy": "^1.0.4",
@@ -54,6 +54,10 @@
     "qa",
     "automation"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PilarGra/musicAutomationCypress"
+  },
   "author": "Pilar Granados",
   "license": "ISC"
 }
