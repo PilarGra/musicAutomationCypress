@@ -5,8 +5,8 @@ describe("login",() =>{
         musicPageSpotifyFlow.openNavigator();
     });
 
-    it("Login Exitoso",() => {
-        /*1. Login Exitoso*/
+    it("Login Successfully",() => {
+        /*1. Login Successfully*/
         cy.get("#main > div > div.ZQftYELq0aOsg6tPbVbV > div.jEMA2gVoLgPQqAFrPhFw > header > div.rwdnt1SmeRC_lhLVfIzg > div.LKFFk88SIRC9QKKUWR5u > button.Button-sc-qlcn5g-0.bRejwy > span").click();
         cy.get("#login-username").click().type("oscargranadosc02@gmail.com");
         cy.get("#login-password").click().type("Gran*OsPra89!");
@@ -16,6 +16,16 @@ describe("login",() =>{
         cy.get("#login-button > span.ButtonInner-sc-14ud5tc-0.liTfRZ.encore-bright-accent-set").click();
         //cy.get("#main > div > div > div > div > div.SAvutxFsWpINsq8pSOqb > div.E34FrewmewkuBM1IDQsg > div.eI1lPxthARSXeWNvjngF > span").should("contain", "Buenas");
         cy.wait(7000);
+
+        it("Invalid Login",() => {
+            /*2. Invalid Login*/
+            cy.get("#main > div > div.ZQftYELq0aOsg6tPbVbV > div.jEMA2gVoLgPQqAFrPhFw > header > div.rwdnt1SmeRC_lhLVfIzg > div.LKFFk88SIRC9QKKUWR5u > button.Button-sc-qlcn5g-0.bRejwy > span").click();
+            cy.get("#login-username").click().type("oscargranadosc02@.com");
+            cy.get("#login-password").click().type("Gran*OsPra89!");
+            cy.wait(5000);
+            cy.get("#root > div > div.sc-jfvxQR.sc-eJDSGI.jQJvTx.kYMNEV > div > div > div.sc-iveFHk.kstyxm").should("contain", "Nombre de usuario o contraseña incorrectos.");
+            cy.wait(5000);
+        });
     });
 
     // Código para cerrar el navegador
