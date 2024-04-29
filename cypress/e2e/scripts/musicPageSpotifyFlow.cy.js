@@ -1,14 +1,15 @@
 class musicPageSpotifyFlow {
     static openNavigator() {
-        console.log("Iniciando prueba de proceso de navegación en Spotify!")
+        console.log("Iniciando prueba de navegación en Spotify!")
         cy.visit("https://open.spotify.com/intl-es");
         cy.wait(7000);
     }
+
+    static closeNavigator() {
+        cy.clearCookies();
+        cy.clearLocalStorage();
+        cy.window().then(win => win.close());
+    }
 }
-    before(() => {
-      musicPageSpotifyFlow.openNavigator();
-      cy.get("#onetrust-group-container")
-        cy.get("#onetrust-close-btn-container > button").click();
-});
 
 export default musicPageSpotifyFlow;

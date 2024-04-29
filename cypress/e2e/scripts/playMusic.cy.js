@@ -6,12 +6,12 @@ describe("playMusic",() =>{
     });
 
     it("PLay",() => {
-        /*4. Play music*/
+        /*5. Play music*/
         cy.get("#main > div > div.ZQftYELq0aOsg6tPbVbV > div.jEMA2gVoLgPQqAFrPhFw > div.main-view-container > div.main-view-container__scroll-node > div:nth-child(2) > div.main-view-container__scroll-node-child > main > section > div > div > section:nth-child(1) > div.iKwGKEfAfW7Rkx2_Ba4E.Z4InHgCs2uhk0MU93y_a.deJGxfMNXUc8uApEGgoQ.fJTotRs7ANTq1nrBwlqA > div:nth-child(1)").click();
         cy.wait(3000);
         cy.get("#main > div > div.ZQftYELq0aOsg6tPbVbV > div.jEMA2gVoLgPQqAFrPhFw > div.main-view-container > div.main-view-container__scroll-node > div:nth-child(2) > div.main-view-container__scroll-node-child > main > section > div > div.EmeHQXR87mUskYK6xEde > div:nth-child(2) > div:nth-child(2) > div > div > div > button > span").click({ force: true });
         cy.wait(3000);
-        cy.get("#main > div > div.dialog.ftlV6Ixmq4wkKMg7hJ1v > div > div.SVnAziPF2z_cgAGrp6He.IDHZCFcj1ynmYu6Sm5SR > div.miG_SXrw265mkozdEHrJ > p > a").click();
+        cy.get("#main > div > div.dialog.ftlV6Ixmq4wkKMg7hJ1v > div > div.SVnAziPF2z_cgAGrp6He.IDHZCFcj1ynmYu6Sm5SR > div.miG_SXrw265mkozdEHrJ > p > a").click({ force: true });
         cy.wait(2000);
         cy.get("#login-username").click().type("oscargranadosc02@gmail.com");
         cy.get("#login-password").click().type("Gran*OsPra89!");
@@ -34,4 +34,7 @@ describe("playMusic",() =>{
             }
         });
     })
+    afterEach(() => {
+        cy.log("***** TEST COMPLETED SUCCESSFULLY. *****");
+    });
 })
