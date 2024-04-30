@@ -6,7 +6,7 @@ describe("playlist",() =>{
     });
 
     it("Follow an Artist",() => {
-        /*9. Follow an Artist*/
+        /*8. Follow an Artist*/
         cy.get("#main > div > div.ZQftYELq0aOsg6tPbVbV > div.jEMA2gVoLgPQqAFrPhFw > div.main-view-container > div.main-view-container__scroll-node > div:nth-child(2) > div.main-view-container__scroll-node-child > main > section > div > div > section:nth-child(1) > div.iKwGKEfAfW7Rkx2_Ba4E.Z4InHgCs2uhk0MU93y_a.deJGxfMNXUc8uApEGgoQ.fJTotRs7ANTq1nrBwlqA > div:nth-child(3) > div.CardButton-sc-g9vf2u-0.doNNoL").click();
         cy.wait(3000);
         cy.get('button.Button-sc-y0gtbx-0.aejTT').click({ force: true });
@@ -24,7 +24,7 @@ describe("playlist",() =>{
         //Click on follow
         cy.get("#main > div > div.ZQftYELq0aOsg6tPbVbV > div.jEMA2gVoLgPQqAFrPhFw > div.main-view-container > div.main-view-container__scroll-node > div:nth-child(2) > div.main-view-container__scroll-node-child > main > section > div > div.EmeHQXR87mUskYK6xEde > div:nth-child(2) > div:nth-child(2) > div > div > button.Button-sc-y0gtbx-0.aejTT").click({force:true});
 
-        //10. Stop following
+        //9. Stop following
         cy.contains("Following").should("be.visible");
     });
 
